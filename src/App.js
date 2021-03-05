@@ -1,6 +1,7 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import tweetLogo from './tweet.png'
+import SearchPage from './SearchPage.js'
 
 function App() {
   return (
@@ -8,9 +9,10 @@ function App() {
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <img src={tweetLogo} className="App-logo" alt="logo"/>
-        <p>
-          TweetyFind
-        </p>
+        
+        <h1>TweetyFind</h1>
+        <SearchPage/>
+        
         <a
           className="App-link"
           href="https://github.com/neztEx/tweetyfind"
