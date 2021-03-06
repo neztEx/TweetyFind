@@ -2,6 +2,7 @@
 import './App.css';
 import tweetLogo from './tweet.png'
 import SearchPage from './SearchPage.js'
+import Search from './components/Search.js'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         
         <h1>TweetyFind</h1>
         <SearchPage/>
+        <Search/>
         
         <a
           className="App-link"
