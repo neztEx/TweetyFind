@@ -3,6 +3,7 @@ import './App.css';
 import tweetLogo from './tweet.png'
 import SearchPage from './SearchPage.js'
 import Search from './components/Search.js'
+import SelectIndex from './components/SelectIndex.js'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <img src={tweetLogo} className="App-logo" alt="logo"/>
         
         <h1>TweetyFind</h1>
+        <SelectIndex/>
         <SearchPage/>
         <Search/>
         
