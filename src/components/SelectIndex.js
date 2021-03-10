@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+
 import {
     Switch,
     View,
@@ -7,8 +8,8 @@ import {
     StyleSheet
 } from "react-native";
 
-const SelectIndex = () => {
-    const [switchValue, setSwitchValue] = useState(false);
+const SelectIndex = ({switchValue, setSwitchValue}) => {
+    // const [switchValue, setSwitchValue] = useState(false);
     const toggleSwitch = (value) => {
         setSwitchValue(value);
     };
@@ -16,7 +17,7 @@ const SelectIndex = () => {
         <View style={{flex:0.05, flexDirection: "row"}}>
             <Text style={{color: "white"}}>
             {
-                switchValue ? 'Hadoop' : 'Lucene'
+                switchValue ? 'Hadoop ' : 'Lucene '
             }
             </Text>
             <Switch

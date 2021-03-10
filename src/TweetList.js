@@ -6,8 +6,8 @@ const TweetList = ({tweetList=[]}) => {
         {tweetList.map((data,index) => {
             if (data) {
                 return (
-                    <div key = {data.name}>
-                        <h3>{data.name}</h3>
+                    <div key = {data.handle}>
+                        <h3>{data.handle}</h3>
                     </div>
                 )
             }
