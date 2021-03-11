@@ -13,8 +13,6 @@ const postLucene = [
 const postHadoop = [
     { id: '1', handle: '@hadoop', tweet: 'This is tweet, with #tweet'},
     { id: '2', handle: '@hadoop', tweet: 'This is tweet223, with #awesome'},
-    { id: '3', handle: '@hadoop', tweet: '#more #law #cool #tweet'},
-    { id: '4', handle: '@hadoop', tweet: 'The this another test #things'},
 ];
 const SearchBar1 = () => {
     const [query, setQuery] = React.useState('')
