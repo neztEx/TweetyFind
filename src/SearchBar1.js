@@ -29,10 +29,10 @@ const SearchBar1 = () => {
         url.search = new URLSearchParams(params).toString()
         let response = await fetch(url)
         let result = await response.json()
-        let array = []
-        array.push(result)
+        // let array = []
+        // array.push(result)
         console.log(result)
-        setTweetList(array)
+        setTweetList(result)
         
     } 
 
