@@ -21,6 +21,36 @@ const SearchBar1 = () => {
 
     const BarStyling = {width:"20rem",background:"#F2F1F9",border:"none",padding:"0.5rem"}
     
+    const fetchDataLucene = async () => {
+        var url = new URL('http://localhost:8080/lucene')
+        var params = {
+            'Query' : query,
+        }
+        url.search = new URLSearchParams(params).toString()
+        let response = await fetch(url)
+        let result = await response.json()
+        let array = []
+        array.push(result)
+        console.log(result)
+        setTweetList(array)
+        
+    } 
+
+    const fetchDataHadoop = async () => {
+        var url = new URL('http://localhost:8080/hadoop')
+        var params = {
+            'Query' : query,
+        }
+        url.search = new URLSearchParams(params).toString()
+        let response = await fetch(url)
+        let result = await response.json()
+        let array = []
+        array.push(result)
+        console.log(result)
+        setTweetList(array)
+        
+    }
+
     const handleKeyPress = (event) => {
 
         if(event.key === 'Enter'){
@@ -29,10 +59,12 @@ const SearchBar1 = () => {
           Index: ${switchValue}
           `);
           if(switchValue === false){
-            setTweetList(postLucene)
+            // setTweetList(postLucene)
+            fetchDataLucene()
           }
           else
-            setTweetList(postHadoop)
+            // setTweetList(postHadoop)
+            fetchDataHadoop()
         }
     }
 
